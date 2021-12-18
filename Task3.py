@@ -47,12 +47,14 @@ The percentage should have 2 decimal digits
 
 
 def fine_area_code(number):
-  if number[0] == '(':
+  if number.startswith('(0'):
     return number[1: number.find(')')]
   elif number.startswith('140'):
     return '140'
-  else:
+  elif number[0] in ['7', '8', '9']:
     return number[0:4]
+  else:
+    return ''
 
 
 bangalore_count = 0
@@ -72,8 +74,6 @@ print('The numbers called by people in Bangalore have codes:')
 for code in sorted(area_codes):
   print(code)
 
-print(bangalore_count)
-print(total_count)
 percent = bangalore_count * 100 / float(total_count)
 print('{0:.2f}'.format(percent) +
       ' percent of calls from fixed lines in Bangalore are calls to other '

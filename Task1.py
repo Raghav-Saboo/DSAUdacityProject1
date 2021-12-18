@@ -29,4 +29,5 @@ for call in calls:
   telephone_numbers.add(call[0])
   telephone_numbers.add(call[1])
 
-print(len(telephone_numbers))
+print('There are ' + str(
+    len(telephone_numbers)) + ' different telephone numbers in the records.')
