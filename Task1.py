@@ -25,8 +25,8 @@ for text in texts:
   telephone_numbers.add(text[0])
   telephone_numbers.add(text[1])
 
-  for call in calls:
-    telephone_numbers.add(call[0])
-    telephone_numbers.add(call[1])
+for call in calls:
+  telephone_numbers.add(call[0])
+  telephone_numbers.add(call[1])
 
 print(len(telephone_numbers))
